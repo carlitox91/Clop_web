@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Login Usuario">
+	<meta name="author" content="Carlos Niño">
+
+	<link rel="icon" href="img/logoClop.ico">
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+
+	<!-- Custom CSS -->
+	<link href="css/grayscale.css" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+</head>
+
+<header class="intro">
+		<div class="intro-body">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2">
+						<h1 class="brand-heading">CLOP</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+					<i class="fa fa-bars"></i>
+				</button>
+				<a class="navbar-brand page-scroll" href="IndexClop.html">
+					<i class="glyphicon glyphicon-circle-arrow-left"></i>  <span class="light">Volver</span> Clop
+				</a>
+			</div>
+	 </nav>
+  
+  <body>
+
+
+	<div class="container">
+
+	  <form class="form-signin">
+		<h2 class="form-signin-heading">Por favor llene los campos:</h2>
+		<label for="inputEmail" class="sr-only">Usuario</label>
+		<input type="email" id="inputEmail" class="form-control" placeholder="Nombre de Usuario" required="" autofocus="">
+		<label for="inputPassword" class="sr-only">Contraseña</label>
+		<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="">
+		<div class="checkbox">
+		  <label>
+			<input type="checkbox" value="remember-me"> Recordar
+		  </label>
+		</div>
+		<div class="btn-group" role="group" aria-label="">
+  
+   <div class="btn-group" role="group">
+	<button type="button" class="btn btn-lg btn-default dropdown-toggle" id= "dropdownMenu1" data-toggle="dropdown" aria-extended="true" aria-expanded="false">
+	  Roles
+	  <span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" aria-labelledby= "dropdownMenu1">
+	  <li><a href="indexAdmin.html">Administrador</a></li>
+	  <li><a href="indexPlaneador.html">Planeador</a></li>
+	  <li><a href="indexOperador.html">Operador</a></li>
+	</ul>
+	<button type="button" class="btn btn-lg btn-default"><a href="#">  <span class="fa fa-sign-in" aria-hidden=true></span> Ingresar</a></button>
+  </div>
+  
+
+	</form>
+
+	</div> <!-- /container -->
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="./Signin Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+  <script src="js/grayscale.js"></script>
+
+</body>
+<footer>
+	<div class="container text-center">
+		<p>Copyright &copy; CLOP 2016</p>
+	</div>
+</footer>
+
+</html>
