@@ -33,27 +33,17 @@
 					<div class="container col-md-6 col-md-offset-3">
 
 			  <form class="form-group intro-text" >
-				<h2>Por favor llene los campos:</h2>
-				<label for="inputEmail" class="sr-only">Usuario</label>
-				<input type="email" id="inputEmail" class="form-control" placeholder="Nombre de Usuario" required="" autofocus="">
-				<label for="inputPassword" class="sr-only">Contraseña</label>
+				<h2 align="left">Por favor llene los campos:</h2>
+				<input type="text" id="usuario" class="form-control" placeholder="Nombre de Usuario" required="true" autofocus="autofocus" value="" 
+                maxlength="16"
+                minlength="6"/>
 				<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="true">
-				<div class="checkbox">
+				<div class="checkbox" align="left">
 				  <label>
 					<input type="checkbox" value="remember-me"> Recordar
 				  </label>
-				</div>	  
-			   <div class="btn-group" role="group">
-				<button type="button" class="btn btn-lg btn-default dropdown-toggle" id= "dropdownMenu1" data-toggle="dropdown" aria-extended="true" aria-expanded="false">
-				  Roles
-				  <span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu" aria-labelledby= "dropdownMenu1">
-				  <li><a href="../private/indexAdmin.html">Administrador</a></li>
-				  <li><a href="../private/indexPlaneador.html">Planeador</a></li>
-				  <li><a href="../private/indexOperador.html">Operador</a></li>
-				</ul>
-				<button type="submit" class="btn btn-lg btn-default"><a href="#">  <span class="fa fa-sign-in" aria-hidden=true></span> Ingresar</a></button>
+				</div>	 
+				<button type="submit" class="btn btn-lg btn-default" href="#"><span class="fa fa-sign-in" aria-hidden=true></span> Ingresar</button>
 			   </div>
 		      </form>
 			</div> <!-- /container -->
@@ -82,7 +72,30 @@
 		  <script src="../js/jquery.js"></script>
 		  <script src="../js/bootstrap.min.js"></script>
 		  <script src="../js/grayscale.js"></script>
+			
+		  <script>
+		  	$(document).on("ready",function(){
+		  		
+		  		$('button.btn-lg').click(function(){
+			  		var usuario = $('#usuario').val();
 
+			  		if (usuario == "administrador") {
+			  			window.open("../private/indexAdmin.html",'_blank');
+			  		}
+			  		else if (usuario == "planeador"){
+			  			window.open("../private/indexPlaneador.html",'_blank');
+			  		}
+		  			else if (usuario == "operadorador"){
+			  			window.open("../private/indexOperador.html",'_blank');
+			  		}
+			  		else {
+			  			alert("El usuario " + usuario + " NO existe.");
+			  		}
+		  		});
+
+		  	});
+
+		  </script>
 
 		</body>
 		<footer>
