@@ -77,7 +77,7 @@
 		  	$(document).on("ready",function(){
 		  		
 		  		$('button.btn-lg').click(function(){
-			  		var usuario = $('#usuario').val();
+			  		var usuario = $('#usuario').val().toLowerCase();
 
 			  		if (usuario == "administrador") {
 			  			window.open("../private/indexAdmin.html",'_blank');
