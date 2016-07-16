@@ -34,7 +34,7 @@
 
 			  <form class="form-group intro-text" >
 				<h2 align="left">Por favor llene los campos:</h2>
-				<input type="text" id="usuario" class="form-control" placeholder="Nombre de Usuario" required="true" autofocus="autofocus" value="" 
+				<input type="text" id="usuario" class="form-control" placeholder="Nombre de Usuario" required="true" autofocus="autofocus" value=""
                 maxlength="16"
                 minlength="6"/>
 				<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="true">
@@ -42,7 +42,7 @@
 				  <label>
 					<input type="checkbox" value="remember-me"> Recordar
 				  </label>
-				</div>	 
+				</div>
 				<button type="submit" class="btn btn-lg btn-default" href="#"><span class="fa fa-sign-in" aria-hidden=true></span> Ingresar</button>
 			   </div>
 		      </form>
@@ -66,32 +66,32 @@
 						</a>
 					</div>
 			 </nav>
-		 	
-			
+
+
 
 		  <script src="../js/jquery.js"></script>
 		  <script src="../js/bootstrap.min.js"></script>
 		  <script src="../js/grayscale.js"></script>
-			
+
 		  <script>
 		  	$(document).on("ready",function(){
-		  		
+
 		  		$('button.btn-lg').click(function(){
 			  		var usuario = $('#usuario').val().toLowerCase();
 
-			  		if (usuario == "administrador") {
-			  			window.open("../private/indexAdmin.html",'_blank');
-			  		}
-			  		else if (usuario == "planeador"){
-			  			window.open("../private/indexPlaneador.html",'_blank');
-			  		}
-		  			else if (usuario == "operadorador"){
-			  			window.open("../private/indexOperador.html",'_blank');
-			  		}
-			  		else {
-			  			alert("El usuario " + usuario + " NO existe.");
-			  		}
-		  		});
+					if (usuario == "administrador") {
+						window.open("../private/indexAdmin.html",'_blank');
+					}
+					else if (usuario == "planeador"){
+						window.open("../private/indexPlaneador.html",'_blank');
+					}
+					else if (usuario == "operador"){
+						window.open("../private/indexOperador.html",'_blank');
+					}
+					else {
+						alert("El usuario " + usuario + " NO existe.");
+					}
+				});
 
 		  	});
 
