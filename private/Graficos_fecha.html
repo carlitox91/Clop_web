@@ -13,7 +13,7 @@
         <script src="https://www.amcharts.com/lib/3/serial.js"></script>
         <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
-        <title>Programaciones</title>
+        <title>Graficos Por Fecha</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="../css/bootstrap.css" rel="stylesheet">
@@ -51,7 +51,7 @@
                           <img id="logo" src="../img/LC3.png"></a>
                 </div>
                 <div>
-                        <a class="navbar-brand">CLOP</a>
+                        <a href="indexAdmin.html" class="navbar-brand">CLOP</a>
 
                     </div>
                 <!-- Top Menu Items -->
@@ -138,52 +138,28 @@
                             </li>
                             <li class="divider"></li>
                             <li>
-                                <a href="../public/login.html"><i class="fa fa-fw fa-power-off"></i> Cerrar Sesión</a>
+                                <a href="indexClop.html"><i class="fa fa-fw fa-power-off"></i> Cerrar Sesión</a>
                             </li>
                         </ul>
                     </li>
                 </ul>
-                <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
-                    <ul class="nav navbar-nav side-nav">
-                        <li>
-                            <a href="indexAdmin.html"><i class="fa fa-truck"></i> Harold Vargas</a>
-                        </li>
-                        <li>
-                            <a href="Graficos.html"><i class="fa fa-fw fa-bar-chart-o"></i> Reportes</a>
-                        </li>
-                        <li class="active">
-                            <a href="tablas.html"><i class="fa fa-fw fa-table"></i> Programaciones</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Usuarios <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="collapse">
-                                <li>
-                                    <a href="new_user_form.html">Crear</a>
-                                </li>
-                                <li>
-                                    <a href="#">Modificar</a>
-                                </li>
-                                <li>
-                                    <a href="#">Bloquear</a>
-                                </li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Usuarios <i class="fa fa-fw fa-caret-down"></i></a>
-                            <ul id="demo" class="collapse">
-                                <li>
-                                    <a href="#">Crear</a>
-                                </li>
-                                <li>
-                                    <a href="#">Modificar</a>
-                                </li>
-                                <li>
-                                    <a href="#">Bloquear</a>
-                                </li>
-                            </ul>
-                        </li>
+                        <ul class="nav navbar-nav side-nav">
+                            <li class="active">
+                                <a href="Graficos_fecha.html"><i class="fa fa-calendar-o"></i> Por fecha</a>
+                            </li>
+                            <li>
+                                <a href="modulo_modificar_conductor.html"><i class="fa fa-building-o"></i> Por Empresa</a>
+                            </li>
+                            <li>
+                                <a href="modulo_inhabilitar_conductor.html"><i class="glyphicon glyphicon-road"></i> Por Ruta</a>
+                            </li>
+                            <li>
+                                <a href="modulo_inhabilitar_conductor.html"><i class="fa fa-tint"></i> Por Producto</a>
+                            </li>
+                        </ul>
+                    </div>
 
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
             </nav>
 
             <div id="page-wrapper">
@@ -199,7 +175,7 @@
                                         <i class="fa fa-dashboard"></i>  <a href="indexAdmin.html"> Panel Administrador</a>
                                     </li>
                                     <li class="active">
-                                    <i> </i> <a href="tablas.html"> Programaciones</a>
+                                    <i> </i> <a href="Graficos.html"> Reportes Gráficos</a>
                                     </li>
                                 </ol>
                             </div>
@@ -210,69 +186,25 @@
 
                     <!-- Flot Charts -->
                     <div class="row">
-                    <div class="col-lg-12">
-                        <h2>Programación de Vehículos</h2>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Empresa Transportadora</th>
-                                        <th>Placa</th>
-                                        <th>Tanque</th>
-                                        <th>Nombre Conductor</th>
-                                        <th>Cédula</th>
-                                        <th>Origen</th>
-                                        <th>Destino</th>
-                                        <th>Producto</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>UT DEL PUTUMAYO</td>
-                                        <td>SZY002</td>
-                                        <td>R32456</td>
-                                        <td>LUIS ENRIQUE RAMIREZ SANTANILLA</td>
-                                        <td>12113206</td>
-                                        <td>ESTACIÓN DINA NORTE</td>
-                                        <td>DINA CRETÁCEOS</td>
-                                        <td>CRUDO MEZCLA</td>
-                                    </tr>
-                                    <tr>
-                                        <td>COPETRAN LTDA.</td>
-                                        <td>SXS869</td>
-                                        <td>R78482</td>
-                                        <td>JERLY RODRIGO MORALES</td>
-                                        <td>86064234</td>
-                                        <td>APIAY</td>
-                                        <td>RUBIALES</td>
-                                        <td>NAFTA VIRGEN</td>
-                                    </tr>
-                                    <tr>
-                                        <td>COTRANSCOPETROL S.A.S.</td>
-                                        <td>STS869</td>
-                                        <td>R73582</td>
-                                        <td>JOSE URIEL LÓPEZ</td>
-                                        <td>60773833</td>
-                                        <td>APIAY</td>
-                                        <td>RUBIALES</td>
-                                        <td>NAFTA VIRGEN</td>
-                                    </tr>
-                                    <tr>
-                                        <td>TRANSPORTES T.M.C. Y CIA. S.A.S.</td>
-                                        <td>SZW613</td>
-                                        <td>R87684</td>
-                                        <td>EFRAÍN RUIZ MURILLO</td>
-                                        <td>35247692</td>
-                                        <td>APIAY</td>
-                                        <td>RUBIALES</td>
-                                        <td>NAFTA VIRGEN</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                        <div id="chartdiv"></div>
+    <div class="container-fluid">
+      <div class="row text-center" style="overflow:hidden;">
+            <div class="col-sm-3" style="float: none !important;display: inline-block;">
+                <label class="text-left"></label>
+                <input class="chart-input" data-property="topRadius" type="range" min="0" max="1.5" value="1" step="0.01"/>
+            </div>
 
-                </div>
+            <div class="col-sm-3" style="float: none !important;display: inline-block;">
+                <label class="text-left"></label>
+                <input class="chart-input" data-property="angle" type="range" min="0" max="89" value="30" step="1"/>
+            </div>
+
+            <div class="col-sm-3" style="float: none !important;display: inline-block;">
+                <label class="text-left"></label>
+                <input class="chart-input" data-property="depth3D" type="range" min="1" max="120" value="40" step="1"/>
+            </div>
+        </div>
+    </div>
                     </div>
                     <!-- /.row -->
 
@@ -321,19 +253,19 @@
         "type": "serial",
         "startDuration": 2,
         "dataProvider": [{
-            "country": "Campo Rubiales",
+            "country": "Mayo 2016",
             "Barriles": 4025,
             "color": "#008700"
         }, {
-            "country": "Estación Cusiana",
+            "country": "Junio 2016",
             "Barriles": 2882,
             "color": "#1cce00"
         }, {
-            "country": "Sebastopol Biomax",
+            "country": "Julio 2016",
             "Barriles": 1809,
             "color": "#FF9E01"
         }, {
-            "country": "Velasquez 26",
+            "country": "Agosto 2016",
             "Barriles": 1322,
             "color": "#FCD202"
         }, ],

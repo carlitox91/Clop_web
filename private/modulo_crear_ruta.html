@@ -1,0 +1,134 @@
+	<!DOCTYPE html>
+	<html lang="es">
+
+	<head>		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Panel de control Administrador">
+		<meta name="author" content="CLOP">
+		<link rel="icon" href="../img/logoClop.ico">
+
+		<title>Módulo Crear rutas</title>
+
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/estilosclop.css" rel="stylesheet" type="text/css">
+		<link href="../css/sb-admin.css" rel="stylesheet">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/sweetalert.css" rel="stylesheet" type="text/css">
+		<script src="../js/sweetalert.min.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/semantic.min.js"></script>
+
+
+
+	</head>
+
+	<body>
+	<header>
+			<div class="row">
+				<div class="col-lg-12">
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>  <a href="indexAdmin.html"> Panel Administrador</a>
+						</li>
+						<li>
+							<a href="modulo_rutas.html"> Módulo rutas</a>
+						</li>
+						<li class="active">
+							<a href="#"> Crear ruta</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+		</header>
+
+
+		<div id="wrapper">
+
+
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img id="logo" src="../img/LC3.png"></a>
+					</div>
+
+					<div>
+						<a href="indexAdmin.html" class="navbar-brand">CLOP</a>
+
+					</div>
+
+
+
+				</nav>
+
+					<h9> Creación rutas</h9>
+				<form class="contact_form" action="" method="get" name="contact_form">
+				<fieldset>
+				<ul>
+					<li>
+
+					<span class="requiere-notificacion"> Campos Obligatorios *</span>
+					</li>
+					<li>
+					<label for="origen"> Origen </label>
+					<input type="text" id="origen" name="name" minlength="4" maxlength="33" required pattern="[A-Za-z/\s//./]{4,33}">
+					</li>
+					<li>
+					<label for="destino"> Destino </label>
+					<input type="text" id="destino" name="destino" minlength="4" maxlength="33" required pattern="[A-Za-z/\s//./]{4,33}">
+					</li>
+					<li>
+					<label for="direccion"> Departamento </label>
+					<input type="text" name="Departamento" minlength="4" maxlength="25">
+					</li>
+					<li>
+					<label for="kilometraje"> Kilometraje </label>
+					<input type="text" id="kilometraje" name="kilometraje" minlength="1" maxlength="4" required pattern="[0-9]{1,4}">
+					</li>
+					<li>
+					<label for="producto"> Tipo Producto </label>
+					<input type="text" id="producto" name="producto" minlength="4" maxlength="25" required>
+					</li>
+					<li>
+					<label for="fecha"> Fecha registro </label>
+					<input type="date" id="fecha" name="fecha" minlength="10" maxlength="10" required>
+					</li>
+					<li>
+					<label for="horasvigencia"> Horas de Vigencia </label>
+					<input type="text" id="horasvigencia" name="horasvigencia" minlength="1" maxlength="4" required pattern="[0-9]{1,4}">
+					</li>
+					<li class="botones">
+					    <button id="enviar" href="#" class="submit" type="button">Crear</button>
+						<button id="cancelar" href="modulo_rutas.html" class="reset" type="reset">Limpiar</button>
+						<button class="volver"><a href="modulo_rutas.html"> Salir</a></button>
+					</li>
+				</ul>
+			</fieldset>
+				</form>
+			<script>
+
+				$().ready(function(){
+		$('#enviar').click(function(){
+			var origenValido= document.getElementById('origen').checkValidity();
+			var destinoValido= document.getElementById('destino').checkValidity();
+			var productoValido= document.getElementById('producto').checkValidity();
+			var kilometrajeValido= document.getElementById('kilometraje').checkValidity();
+			var horasvigenciaValido= document.getElementById('horasvigencia').checkValidity();
+			if (origenValido && destinoValido && productoValido && kilometrajeValido && horasvigenciaValido)
+			swal("¡Ruta Creada!");
+		else
+			swal("¡Por favor verifique el formulario! Puede que los campos contengan datos erróneos");
+		});
+		$('#cancelar').click(function(){
+			swal("Por favor diligencia el formulario nuevamente");
+		});
+		});
+			</script>
+
+
+			</body>
+
+			</html>

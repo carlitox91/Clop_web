@@ -1,0 +1,150 @@
+	<!DOCTYPE html>
+	<html lang="es">
+
+	<head>		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Panel de control Administrador">
+		<meta name="author" content="CLOP">
+		<link rel="icon" href="../img/logoClop.ico">
+
+		<title>Módulo Modificar vehículos</title>
+
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/estilosclop.css" rel="stylesheet" type="text/css">
+		<link href="../css/sb-admin.css" rel="stylesheet">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/sweetalert.css" rel="stylesheet" type="text/css">
+		<script src="../js/sweetalert.min.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/semantic.min.js"></script>
+
+
+
+	</head>
+
+	<body>
+	<header>
+			<div class="row">
+				<div class="col-lg-12">
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>  <a href="indexAdmin.html"> Panel Administrador</a>
+						</li>
+						<li>
+							<a href="modulo_vehiculos.html"> Módulo vehículos</a>
+						</li>
+						<li class="active">
+							<a href="#"> Modificar Vehículo</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+		</header>
+
+
+		<div id="wrapper">
+
+
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img id="logo" src="../img/LC3.png"></a>
+					</div>
+
+					<div>
+						<a href="../index.html" class="navbar-brand">CLOP</a>
+
+					</div>
+
+
+
+				</nav>
+
+					<h9> Modificación vehículos</h9>
+				<form class="contact_form" action="" method="get" name="contact_form">
+				<fieldset>
+				<ul>
+				<br>
+				<select name="name">
+					<option value="" selected="Seleccionar">- Seleccione Placa Carro -</option>
+					<option value="SXV514">SXV514</option>
+					<option value="SSZ658">SSZ658</option>
+					<option value="TFP743">TFP743</option>
+					<option value="SXS333">SXS333</option>
+					<option value="HTS537">HTS537</option>
+					<option value="TTR123">TTR123</option>
+					<option value="SSY500">SSY500</option>
+					<option value="YHK152">YHK152</option>
+					<option value="WXT948">WXT948</option>
+					<option value="SSQ652">SSQ652</option>
+					<option value="TFP841">TFP841</option>
+					</select>
+					<li>
+
+					<span class="requiere-notificacion"> Campos Obligatorios *</span>
+					</li>
+					<li>
+					<label for="placacarro"> Placa Carro </label>
+					<input type="text" id="placacarro" name="name" minlength="6" maxlength="6" required pattern="([A-Z]{1,3})([0-9]{1,3})">
+					</li>
+					<li>
+					<label for="placatanque"> Placa Tanque </label>
+					<input type="text" id="placatanque" name="placatanque" minlength="6" maxlength="6" required pattern="([A-Z]{1})([0-9]{5})">
+					</li>
+					<li>
+					<label for="modelocarro"> Modelo Carro </label>
+					<input type="text" id="modelocarro" name="modelocarro" minlength="1" maxlength="4" required pattern="[0-9]{1,4}">
+					</li>
+					<li>
+					<label for="modelotanque"> Modelo Tanque </label>
+					<input type="text" id="modelotanque" name="modelotanque" minlength="1" maxlength="4" required pattern="[0-9]{1,4}">
+					</li>
+					<li>
+					<label for="transportadora"> Transportadora </label>
+					<input type="text" id="transportadora" name="transportadora" minlength="4" maxlength="25" required>
+					</li>
+					<li>
+					<label for="tipo">Tipo </label>
+					<input type="text" id="tipo" name="tipo" minlength="5" maxlength="7" required pattern="[A-Za-z]{4,7}">
+					<li>
+					<label for="fecha"> Fecha Registro </label>
+					<input type="date" id="fecha" name="fecha" minlength="10" maxlength="10" required>
+					</li>
+					</li>
+					<li class="botones">
+					    <button id="enviar" href="#" class="submit" type="button">Modificar</button>
+						<button id="cancelar" href="modulo_vehiculos.html" class="reset" type="reset">Limpiar</button>
+						<button class="volver"><a href="modulo_vehiculos.html"> Salir</a></button>
+					</li>
+				</ul>
+			</fieldset>
+				</form>
+			<script>
+
+				$().ready(function(){
+		$('#enviar').click(function(){
+			var placacarroValido= document.getElementById('placacarro').checkValidity();
+			var placatanqueValido= document.getElementById('placatanque').checkValidity();
+			var tipoValido= document.getElementById('tipo').checkValidity();
+			var transportadoraValido= document.getElementById('transportadora').checkValidity();
+			var modelocarroValido= document.getElementById('modelocarro').checkValidity();
+			var modelotanqueValido= document.getElementById('modelotanque').checkValidity();
+			if (placacarroValido && placatanqueValido && transportadoraValido && tipoValido && modelocarroValido && modelotanqueValido)
+			swal("¡Vehiculo Modificado!");
+		else
+			swal("¡Por favor verifique el formulario! Puede que los campos contengan datos erróneos");
+		});
+		$('#cancelar').click(function(){
+			swal("Por favor diligencia el formulario nuevamente");
+		});
+		});
+			</script>
+
+
+			</body>
+
+			</html>

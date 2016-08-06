@@ -166,7 +166,7 @@ a:focus {
 .intro .intro-body .intro-text {
     font-size: 18px;
     text-shadow:8px 8px 12px rgba(0,0,0,6);
-    background:rgba(255,255,255,.3);
+    background:rgba(230,152,31,0.25);
     padding-left:8px;
     padding-right:8px;
     border-radius:5px;
@@ -269,13 +269,9 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/LOGO CLOP 3.jpg) no-repeat center center scroll;
     background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
+    }
 
 #map {
     width: 100%;
@@ -306,20 +302,6 @@ a:focus {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
-}
-
-.btn-default {
-    border: 1px solid #5cb85c;
-    color: #5cb85c;
-    background-color: rgba(0, 0, 0, 0.58);
-}
-
-.btn-default:hover,
-.btn-default:focus {
-    border: 1px solid #5cb85c;
-    outline: 0;
-    color: #000;
-    background-color: #5cb85c;
 }
 
 ul.banner-social-buttons {

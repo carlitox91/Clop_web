@@ -1,0 +1,134 @@
+	<!DOCTYPE html>
+	<html lang="es">
+
+	<head>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Panel de control Administrador">
+		<meta name="author" content="CLOP">
+		<link rel="icon" href="../img/logoClop.ico">
+
+		<title>Módulo Inhabilitar Conductor</title>
+
+		<link href="../css/bootstrap.css" rel="stylesheet">
+		<link href="../css/estilosclop.css" rel="stylesheet" type="text/css">
+		<link href="../css/sb-admin.css" rel="stylesheet">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/sweetalert.css" rel="stylesheet" type="text/css">
+		<script src="../js/sweetalert.min.js"></script>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/semantic.min.js"></script>
+
+
+
+	</head>
+
+	<body>
+	<header>
+			<div class="row">
+				<div class="col-lg-12">
+					<ol class="breadcrumb">
+						<li>
+							<i class="fa fa-dashboard"></i>  <a href="indexAdmin.html"> Panel Administrador</a>
+						</li>
+						<li>
+							<a href="modulo_conductores.html.html"> Módulo conductor</a>
+						</li>
+						<li class="active">
+							<a href="#"> Inhabilitar conductor</a>
+						</li>
+					</ol>
+				</div>
+			</div>
+
+		</header>
+
+
+		<div id="wrapper">
+
+
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">
+						<img id="logo" src="../img/LC3.png"></a>
+					</div>
+
+					<div>
+						<a href="../index.html" class="navbar-brand">CLOP</a>
+
+					</div>
+
+
+
+				</nav>
+
+					<h9> Inhabilitación conductor</h9>
+				<form class="contact_form" action="" method="get" name="contact_form">
+
+				<br>
+				<ul>
+					<select name="name">
+					<option value="" selected="Seleccionar">- Seleccione Cédula -</option>
+					<option value="1048847598">1048847598</option>
+					<option value="11234567">11234567</option>
+					<option value="2232525">2232525</option>
+					<option value="11354580">11354580</option>
+					<option value="5346457">5346457</option>
+					<option value="23124124">23124124</option>
+					<option value="543525325">543525325</option>
+					</select>
+					<li>
+
+					<span class="requiere-notificacion"></span>
+					</li>
+					<li>
+					<label for="nombre"> Área de Novedad </label>
+					<select name="name">
+					<option value="" selected="Seleccionar">- Seleccione Área -</option>
+					<option value="operaciones">OPERACIONES</option>
+					<option value="mantenimiento">MANTENIMIENTO</option>
+					<option value="hseq">H.S.E.Q.</option>
+					<option value="seguridad">SEGURIDAD FÍSICA</option>
+					<option value="gestoria">G.T. Carrotanques</option>
+					</select>
+					</li>
+					<li>
+					<label for="observacion">Observaciones</label> <br/>
+ 					<textarea name="descripcion" id="descripcion" cols="40" rows="5" required></textarea>
+					</li>
+
+					<li>
+					    <button id="enviar" href="#" class="enviar" type="reset">Inhabilitar</button>
+						<button id="cancelar" href="#" class="reset" type="reset">Cancelar</button>
+						<button class="volver"><a href="modulo_conductores.html"> Salir</a></button>
+					</li>
+
+
+
+
+				</ul>
+
+				</form>
+			<script>
+
+				$().ready(function(){
+		$('#enviar').click(function(){
+			var descripcionValido= document.getElementById('descripcion').checkValidity();
+			if (descripcionValido)
+			swal("¡conductor Inhabilitado!");
+		else
+			swal("¡Por favor verifique el formulario! Puede que los campos contengan datos erróneos o estén incompletos.");
+		});
+		$('#cancelar').click(function(){
+			swal("Por favor diligencia el formulario nuevamente");
+		});
+		});
+			</script>
+
+			</body>
+
+			</html>

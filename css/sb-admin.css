@@ -8,12 +8,13 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+
 }
 
 @media(min-width:768px) {
     body {
         margin-top: 50px;
+
     }
 }
 
@@ -57,7 +58,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #fff;
 }
 
 .top-nav>li>a:hover,
@@ -122,8 +123,8 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: rgba(121, 204, 121, 0.68);
         bottom: 0;
+        background-image: url(..//img/verde.jpg);
         overflow-x: hidden;
         padding-bottom: 40px;
     }
@@ -135,7 +136,7 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #3c763d !important;
+        background-color: rgba(51,179,0,1) !important;
     }
 }
 
@@ -147,11 +148,11 @@ ul.alert-dropdown {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #000;
+    color: #FFF;
 }
 
 .side-nav>li>ul>li>a:hover {
-    color: #000;
+    color: #FFF;
 }
 
 /* Flot Chart Containers */
@@ -224,4 +225,9 @@ ul.alert-dropdown {
 
 .panel-yellow > a:hover {
     color: #df8a13;
+}
+#logo{
+height:40px;
+margin-top:-10px;
+margin-right: -5px;
 }
