@@ -39,7 +39,7 @@
 				<input type="text" id="usuario" class="form-control" placeholder="Nombre de Usuario" required="true" autofocus="autofocus" value=""
                 maxlength="16"
                 minlength="6"/>
-				<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="true" maxlength="25">
+				<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="true" maxlength="12">
 				<div class="checkbox" align="left">
 				  <label>
 					<input type="checkbox" value="remember-me"> Recordar
@@ -80,14 +80,15 @@
 
 		  		$('button.btn-lg').click(function(){
 			  		var usuario = $('#usuario').val().toLowerCase();
+			  		var clave = $('#inputPassword').val().toLowerCase();
 
-					if (usuario == "administrador") {
+					if (usuario && clave == "administrador") {
 						window.open("../private/indexAdmin.html",'_blank');
 					}
-					else if (usuario == "planeador"){
+					else if (usuario == "planeador" && clave == "planeador"){
 						window.open("../private/indexPlaneador.html",'_blank');
 					}
-					else if (usuario == "operador"){
+					else if (usuario == "operador" && clave == "operador"){
 						window.open("../private/indexOperador.html",'_blank');
 					}
 					else {

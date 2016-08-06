@@ -3,4 +3,5 @@ AddDefaultCharset UTF-8
 <Files .htaccess>
     Order allow,deny
     Deny from all
+    ErrorDocument 404 http://clop.herokuapp.com//404page.html
 </Files>
