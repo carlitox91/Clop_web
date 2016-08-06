@@ -1,0 +1,248 @@
+	<!DOCTYPE html>
+	<html lang="es">
+
+	<head>
+
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="Panel de control Administrador">
+	    <meta name="author" content="CLOP">
+	    <link rel="icon" href="../img/logoClop.ico">
+
+	    <title>Section Manager</title>
+
+	    <link href="../css/bootstrap.css" rel="stylesheet">
+	    <link href="../css/estilosclop.css" rel="stylesheet" type="text/css">
+	    <link href="../css/sb-admin.css" rel="stylesheet">
+	    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+	</head>
+
+	<body>
+
+	    <div id="wrapper">
+
+	        <!-- Navigation -->
+	        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	            <!-- Brand and toggle get grouped for better mobile display -->
+	            <div class="navbar-header">
+	                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                    <span class="icon-bar"></span>
+	                </button>
+	                  <a class="navbar-brand" href="#">
+	                  <img id="logo" src="../img/LC3.png"></a>
+	            </div>
+
+	            <div>
+	            	<a href="#" class="navbar-brand"> Welcome Manager</a>
+
+	            </div>
+	            <!-- Top Menu Items -->
+				<ul class="nav navbar-right top-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu message-dropdown">
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><strong>Harold Vargas</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-preview">
+                                <a href="#">
+                                    <div class="media">
+                                        <span class="pull-left">
+                                            <img class="media-object" src="http://placehold.it/50x50" alt="">
+                                        </span>
+                                        <div class="media-body">
+                                            <h5 class="media-heading"><strong>Administrador</strong>
+                                            </h5>
+                                            <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                                            <p></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="message-footer">
+                                <a href="#">Leer todos los mensajes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                        <ul class="dropdown-menu alert-dropdown">
+                            <li>
+                                <a href="#">Horas de <span class="label label-warning">Vigencia</span></a>
+                            </li>
+                            <li>
+                                <a href="#">Pagos <span class="label label-danger">Adicionales</span></a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">Ver todas las alertas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Administrador <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-user"></i> Perfil</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Mensajes</a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-fw fa-gear"></i> Opciones</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="../public/login.html"><i class="fa fa-fw fa-power-off"></i> Cerrar Sesión</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+	            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+	            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+
+	                <ul class="nav navbar-nav side-nav">
+	                    <li class="active">
+	                    <a href="indexAdmin.html"><i class="fa fa-fw fa-truck"></i>Harold Vargas</a>
+	                    </li>
+	                    <li>
+	                        <a href="Graficos.html"><i class="fa fa-fw fa-bar-chart-o"></i> Reports</a>
+	                    </li>
+	                    <li>
+	                        <a href="tablas.html"><i class="fa fa-fw fa-table"></i> Schedules</a>
+	                    </li>
+	                    <li>
+	                        <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-wrench"></i> Users <i class="fa fa-fw fa-caret-down"></i></a>
+	                        <ul id="demo" class="collapse">
+	                            <li>
+	                                <a href="modulo_crear_usuario.html">Create</a>
+	                            </li>
+	                            <li>
+	                                <a href="modulo_modificar_usuario.html">Modify</a>
+	                            </li>
+	                            <li>
+	                                <a href="modulo_inhabilitar_usuario.html">Block out</a>
+	                            </li>
+
+	                            </li>
+
+	                        </ul>
+	                    </li>
+	                </ul>
+	            </div>
+	            <!-- /.navbar-collapse -->
+	        </nav>
+
+	        <div id="page-wrapper">
+
+	            <div class="container-fluid">
+
+	                <!-- Page Heading -->
+	                <div class="row">
+	                    <div class="col-lg-12">
+
+
+	                    </div>
+	                </div>
+	                <!-- /.row -->
+
+	                <div class="row">
+
+	                    <div class="col-lg-3 col-md-6">
+
+
+	                    </div>
+
+	                    <div class="col-lg-3 col-md-6">
+
+	                    </div>
+	                </div>
+	                <!-- /.row -->
+
+	                <div class="row">
+
+	                </div>
+	                <!-- /.row -->
+
+	                <div class="row">
+	                    <div class="col-sm-6 col-md-4">
+
+	                    <a href="modulo_transportadora.html" class="btn btn-lg btn-success"><span class="fa fa-building-o"></span> Courier Company</a>
+
+	                    </div>
+	                    <div class="col-sm-6 col-md-4">
+
+							<a href="modulo_conductores.html" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-user"></span> Drivers</a>
+
+	                    </div>
+	                    <div class="col-sm-6 col-md-4">
+
+							<a href="modulo_rutas.html" class="btn btn-lg btn-success"><span class="glyphicon glyphicon-road"></span> Routes</a>
+
+	                    </div>
+
+
+	            </div>
+
+	            <div class="row">
+
+					<div class="col-sm-6 col-md-4">
+
+	                    <a href="modulo_vehiculos.html" class="btn btn-lg btn-warning"><i class="fa fa-truck"></i> Tanker Trucks</a>
+
+	                    </div>
+	                    <div class="col-sm-6 col-md-4">
+
+							<a href="modulo_autorizar.html" class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-ok"></span> Approvals</a>
+
+	                    </div>
+	                    <div class="col-sm-6 col-md-4">
+
+							<a href="modulo_inactivar.html" class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-remove"></span> Inactivations</a>
+
+	                    </div>
+
+
+	                </div>
+	            <!-- /.container-fluid -->
+
+	        </div>
+	        <!-- /#page-wrapper -->
+
+	    </div>
+	    <!-- /#wrapper -->
+
+	    <!-- jQuery -->
+	    <script src="../js/jquery.js"></script>
+	    <script src="../js/bootstrap.min.js"></script>
+	    <script src="../js/semantic.min.js"></script>
+
+	    <!-- Bootstrap Core JavaScript -->
+
+	    <!-- Morris Charts JavaScript -->
+	    <script src="../js/plugins/morris/raphael.min.js"></script>
+	    <script src="../js/plugins/morris/morris.min.js"></script>
+	    <script src="../js/plugins/morris/morris-data.js"></script>
+
+	</body>
+
+	</html>

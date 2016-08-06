@@ -80,15 +80,14 @@
 
 		  		$('button.btn-lg').click(function(){
 			  		var usuario = $('#usuario').val().toLowerCase();
-			  		var clave = $('#inputPassword').val().toLowerCase();
 
-					if (usuario && clave == "administrador") {
+					if (usuario == "administrador") {
 						window.open("../private/indexAdmin.html",'_blank');
 					}
-					else if (usuario == "planeador" && clave == "planeador"){
+					else if (usuario == "planeador"){
 						window.open("../private/indexPlaneador.html",'_blank');
 					}
-					else if (usuario == "operador" && clave == "operador"){
+					else if (usuario == "operador"){
 						window.open("../private/indexOperador.html",'_blank');
 					}
 					else {
